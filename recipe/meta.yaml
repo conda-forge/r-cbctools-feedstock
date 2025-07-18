@@ -1,4 +1,4 @@
-{% set version = '0.5.0' %}
+{% set version = "0.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cbcTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cbcTools/cbcTools_{{ version }}.tar.gz
-  sha256: 5c1a07e1e4b939411e223934ea884339f00983be54413dbcf043d86301d20a1e
+  sha256: 92c0761b8144cc8bdde40b2bbf46a89ffb9776a3b504555487bad43a08a9465f
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -53,20 +53,10 @@ test:
 about:
   home: https://github.com/jhelvy/cbcTools
   license: MIT
-  summary: "Design and evaluate choice-based conjoint survey experiments. Generate a variety
-    of survey designs, including random designs, full factorial designs, orthogonal
-    designs, D-optimal designs, and Bayesian D-efficient designs as well as designs
-    with \"no choice\" options and \"labeled\" (also known as \"alternative specific\")
-    designs. Conveniently inspect the design balance and overlap, and simulate choice
-    data for a survey design either randomly or according to a multinomial or mixed
-    logit utility model defined by user-provided prior parameters. Conduct a power analysis
-    for a given survey design by estimating the same model on different subsets of the
-    data to simulate different sample sizes. Full factorial and orthogonal designs are
-    obtained using the 'DoE.base' package (Gr\xF6mping, 2018) <doi:10.18637/jss.v085.i05>.
-    D-optimal designs are obtained using the 'AlgDesign' package (Wheeler, 2022) <https://CRAN.R-project.org/package=AlgDesign>.
-    Bayesian D-efficient designs are obtained using the 'idefix' package (Traets et
-    al, 2020) <doi:10.18637/jss.v096.i03>. Choice simulation and model estimation in
-    power analyses are handled using the 'logitr' package (Helveston, 2023) <doi:10.18637/jss.v105.i10>."
+  summary: "Design and evaluate choice-based conjoint survey experiments. Generate a variety of survey designs, including random designs, full factorial designs, orthogonal designs, D-optimal designs, and Bayesian D-efficient designs as well as designs with \"no choice\" options and \"labeled\" (also known as \"alternative
+    specific\") designs. Conveniently inspect the design balance and overlap, and simulate choice data for a survey design either randomly or according to a multinomial or mixed logit utility model defined by user-provided prior parameters. Conduct a power analysis for a given survey design by estimating the same model on
+    different subsets of the data to simulate different sample sizes. Full factorial and orthogonal designs are obtained using the 'DoE.base' package (Grömping, 2018) <doi:10.18637/jss.v085.i05>. D-optimal designs are obtained using the 'AlgDesign' package (Wheeler, 2022) <https://CRAN.R-project.org/package=AlgDesign>. Bayesian
+    D-efficient designs are obtained using the 'idefix' package (Traets et al, 2020) <doi:10.18637/jss.v096.i03>. Choice simulation and model estimation in power analyses are handled using the 'logitr' package (Helveston, 2023) <doi:10.18637/jss.v105.i10>."
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'

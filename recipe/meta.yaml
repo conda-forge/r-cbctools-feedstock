@@ -1,4 +1,4 @@
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cbcTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cbcTools/cbcTools_{{ version }}.tar.gz
-  sha256: 92c0761b8144cc8bdde40b2bbf46a89ffb9776a3b504555487bad43a08a9465f
+  sha256: a24349e80c34946f0a4402fad369e8fcb161eda07f66fd4c12fdb3343dfae524
 
 build:
   number: 0
